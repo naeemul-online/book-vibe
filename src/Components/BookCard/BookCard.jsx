@@ -1,9 +1,9 @@
 import PropTypes from "prop-types"; // ES6
 import { Link } from "react-router-dom";
 function BookCard({ blog }) {
-  const { image, tags, bookName, author, category, rating, bookId } = blog;
+  const { image, tags, bookName, author, category, rating, id } = blog;
   return (
-    <Link to={`/blog/${bookId}`} className="card  bg-base-100 shadow-xl">
+    <Link to={`/blog/${id}`} className="card  bg-base-100 shadow-xl">
       <figure className="px-10 pt-10 bg-[#1313130D] py-10 m-8">
         <img src={image} alt="Shoes" className="rounded-xl" />
       </figure>
