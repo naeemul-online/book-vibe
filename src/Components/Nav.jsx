@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
 const Nav = () => {
   return (
     <div className="navbar bg-base-100 shadow-lg fixed z-10 px-8 work-sans">
@@ -34,19 +36,42 @@ const Nav = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-3xl font-bold">Book Vibe</a>
+        <Link to="/" className="btn btn-ghost text-3xl font-bold">
+          Book Vibe
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-xl ">
-          <li className="border-2 border-green-500 rounded-xl text-green-500">
-            <a>Home</a>
-          </li>
-          <li>
-            <a>Listed Books</a>
-          </li>
-          <li>
-            <a>Pages to Read</a>
-          </li>
+        <ul className="menu menu-horizontal px-1 text-xl items-center gap-4 ">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "border-2 p-2 border-green-500 rounded-xl text-green-500"
+                : ""
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/listed-books"
+            className={({ isActive }) =>
+              isActive
+                ? "border-2 p-2 border-green-500 rounded-xl text-green-500"
+                : ""
+            }
+          >
+            Listed Books
+          </NavLink>
+          <NavLink
+            to="/pages-to-read"
+            className={({ isActive }) =>
+              isActive
+                ? "border-2 p-2 border-green-500 rounded-xl text-green-500"
+                : ""
+            }
+          >
+            Pages to Read
+          </NavLink>
         </ul>
       </div>
       <div className="navbar-end font-semibold hidden md:flex ">
