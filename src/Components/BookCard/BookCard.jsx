@@ -9,7 +9,14 @@ function BookCard({ blog }) {
       </figure>
       <div className="card-body  ">
         <div className="flex gap-4 w-full text-lg font-bold">
-          <h3>{tags}</h3> <h3>{tags}</h3>
+        {tags.map((tag, idx) => (
+            <span
+              className="border-green-500 text-green-500 border rounded mr-2"
+              key={idx}
+            >
+              {tag}
+            </span>
+          ))}
         </div>
         <h2 className="text-2xl font-bold playfair-display">{bookName}</h2>
         <p className="text-lg">By : {author} </p>
