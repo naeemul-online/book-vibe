@@ -15,7 +15,7 @@ const ReadBooks = ({ blog }) => {
     rating,
   } = blog;
   return (
-    <div className="card lg:card-side  work-sans border  ">
+    <div className="card lg:card-side  work-sans border ">
       <figure className=" px-8 m-8  bg-gray-300  flex items-center justify-center">
         <img className="" src={image} alt="Album" />
       </figure>

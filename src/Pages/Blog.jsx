@@ -25,6 +25,7 @@ const Blog = () => {
   const toastRead = () => {
     saveJobApplication(idInt);
     toast("Added to Read List Successfully!");
+    
   };
   return (
     <div className="card lg:card-side shadow-xl work-sans  ">
