@@ -25,15 +25,21 @@ const Nav = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-base-100 rounded-box w-52 text-xl"
           >
-            <li>
+            <NavLink to='/'>
               <a>Home</a>
-            </li>
-            <li>
+            </NavLink>
+            <NavLink to="/listed-books">
               <a>Listed Books</a>
-            </li>
-            <li>
+            </NavLink>
+            <NavLink to="/pages-to-read">
               <a>Pages to Read</a>
-            </li>
+            </NavLink>
+            <NavLink to="/authors">
+              <a>Authors</a>
+            </NavLink>
+            <NavLink to="/about-us">
+              <a>About Ua</a>
+            </NavLink>
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-3xl font-bold">
@@ -71,6 +77,26 @@ const Nav = () => {
             }
           >
             Pages to Read
+          </NavLink>
+          <NavLink
+            to="/authors"
+            className={({ isActive }) =>
+              isActive
+                ? "border-2 p-2 border-green-500 rounded-xl text-green-500"
+                : ""
+            }
+          >
+           Authors
+          </NavLink>
+          <NavLink
+            to="/about-us"
+            className={({ isActive }) =>
+              isActive
+                ? "border-2 p-2 border-green-500 rounded-xl text-green-500"
+                : ""
+            }
+          >
+           About Us
           </NavLink>
         </ul>
       </div>

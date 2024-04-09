@@ -3,6 +3,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 import { MdOutlineContactPage } from "react-icons/md";
 const ReadBooks = ({ blog }) => {
+
   const {
     image,
     bookName,
@@ -14,11 +15,13 @@ const ReadBooks = ({ blog }) => {
     category,
     rating,
   } = blog;
+  
   return (
     <div className="card lg:card-side  work-sans border ">
       <figure className=" px-8 m-8  bg-gray-300  flex items-center justify-center">
         <img className="" src={image} alt="Album" />
       </figure>
+     
       <div className="card-body">
         <h2 className="card-title playfair-display">{bookName}</h2>
         <p className="text-xl">By: {author}</p>

@@ -4,11 +4,11 @@ import "react-toastify/dist/ReactToastify.css";
 import { saveJobApplication } from "../Components/Utility/LocalStorage";
 
 const Blog = () => {
-  const toastWishList = () => toast("Added to Wishlist Successfully!");
   const blog = useLoaderData();
   const { id } = useParams();
   const idInt = parseInt(id);
   const currentBlog = blog.find((currentBlog) => currentBlog.id === idInt);
+
   const {
     image,
     bookName,
@@ -19,14 +19,20 @@ const Blog = () => {
     totalPages,
     publisher,
     yearOfPublishing,
-    rating
+    rating,
   } = currentBlog;
+
 
   const toastRead = () => {
     saveJobApplication(idInt);
     toast("Added to Read List Successfully!");
-    
   };
+
+  const toastWishList = () => {
+    saveJobApplication(idInt)
+    toast("Added to Wishlist Successfully!")
+  };
+
   return (
     <div className="card lg:card-side shadow-xl work-sans  ">
       <figure className=" p-8 m-8 rounded-xl bg-gray-300 w-3/4">
@@ -39,7 +45,6 @@ const Blog = () => {
         <p> {category}</p>
         <hr />
         <p>
-          {" "}
           <span className="font-bold">Review:</span> {review}
         </p>
         <p>
@@ -93,7 +98,6 @@ const Blog = () => {
           </button>
         </div>
       </div>
-
       <ToastContainer></ToastContainer>
     </div>
   );

@@ -1,7 +1,9 @@
+import CustomShapeBarChart from "../Components/CustomShapeBarChart/CustomShapeBarChart";
+
 const PagesToRead = () => {
   return (
     <div>
-      <h2>This pages to read page</h2>
+     <CustomShapeBarChart></CustomShapeBarChart>
     </div>
   );
 };
