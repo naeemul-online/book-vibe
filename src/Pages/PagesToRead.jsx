@@ -1,9 +1,11 @@
+import { useLoaderData } from "react-router-dom";
 import CustomShapeBarChart from "../Components/CustomShapeBarChart/CustomShapeBarChart";
 
 const PagesToRead = () => {
+  const data = useLoaderData()
   return (
     <div>
-     <CustomShapeBarChart></CustomShapeBarChart>
+     <CustomShapeBarChart key={data.id} data={data}></CustomShapeBarChart>
     </div>
   );
 };
