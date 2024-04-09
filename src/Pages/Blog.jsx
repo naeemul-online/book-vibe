@@ -25,7 +25,8 @@ const Blog = () => {
 
   const toastRead = () => {
     saveJobApplication(idInt);
-    toast("Added to Read List Successfully!");
+    
+        toast("Added to Read List Successfully!");
   };
 
   const toastWishList = () => {

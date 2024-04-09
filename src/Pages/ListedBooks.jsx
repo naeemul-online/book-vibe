@@ -26,15 +26,17 @@ const ListedBooks = () => {
   useEffect(() => {
     const storeJobIds = getStoredJobApplication();
     if (jobs.length > 0) {
-      const jobsApplied = jobs.filter((job) => storeJobIds.includes(job.id));
-      // const jobsApplied = [];
-      // for(const id of storeJobIds){
-      //   const job = job.find(job => job.id === id);
-      //   if(job){
-      //     jobsApplied.push(job)
-      //   }
-      // }
-      // console.log(jobs, storeJobIds, jobsApplied)
+      // const jobsApplied = jobs.filter((job) => storeJobIds.includes(job.id));
+      // console.log(jobsApplied, storeJobIds, jobs);
+
+      const jobsApplied = [];
+      for(const id of storeJobIds){
+        const job = jobs.find(job => job.id === id);
+        if(job){
+          jobsApplied.push(job)
+        }
+      }
+      console.log(jobs, storeJobIds, jobsApplied)
       setAppliedJobs(jobsApplied);
       setDisplayJob(jobsApplied);
     }
@@ -69,7 +71,7 @@ const ListedBooks = () => {
           to="/listed-books"
           onClick={() => setTabIndex(0)}
           className={`flex cursor-pointer items-center flex-shrink-0 px-5 py-3 space-x-2 ${
-            tabIndex === 0 ? 'border border-b-0' : 'border-b'
+            tabIndex === 0 ? "border border-b-0" : "border-b"
           }  `}
         >
           <span>Read Books</span>
@@ -79,7 +81,7 @@ const ListedBooks = () => {
           to="/listed-books"
           onClick={() => setTabIndex(1)}
           className={`flex cursor-pointer items-center flex-shrink-0 px-5 py-3 space-x-2 ${
-            tabIndex === 1 ? 'border border-b-0' : 'border-b'
+            tabIndex === 1 ? "border border-b-0" : "border-b"
           }  `}
         >
           <span>Wishlist Books</span>
