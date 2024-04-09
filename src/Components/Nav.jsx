@@ -40,6 +40,12 @@ const Nav = () => {
             <NavLink to="/about-us">
               <a>About Ua</a>
             </NavLink>
+            <NavLink to="#">
+              <a>Sign In</a>
+            </NavLink>
+            <NavLink to="#">
+              <a>Sign Up</a>
+            </NavLink>
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-3xl font-bold">

@@ -4,7 +4,7 @@ const Authors = () => {
   return (
     <div className="bg-gray-100 p-8">
       <h2 className="text-2xl font-semibold mb-4">Authors</h2>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 gap-4">
         {authors.map(author => (
           <div key={author.id} className="bg-white p-4 rounded-lg shadow">
             <img

@@ -22,17 +22,12 @@ const Blog = () => {
     rating,
   } = currentBlog;
 
-
   const toastRead = () => {
-    toast("Added to Read List Successfully!");
-      saveJobApplication(idInt);
-   
-        
+    saveJobApplication(idInt);
   };
 
   const toastWishList = () => {
-    saveJobApplication(idInt)
-    toast("Added to Wishlist Successfully!")
+    saveJobApplication(idInt);
   };
 
   return (
